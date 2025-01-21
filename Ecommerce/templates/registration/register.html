@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <style>
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        <form method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <button type="submit">Register</button>
+           <h5>Already Registered?<a href = "{% url 'login' %}">Login</a></h5>
+        </form>
+        </div>
+    </body>
+</html>

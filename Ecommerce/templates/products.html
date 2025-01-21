@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Products</title>
+        <style>
+          /*  table{
+                background-color: bisque;
+                border: 1px solid black;
+                margin: auto;
+                width: 50%;
+                height: 50%;
+
+            }
+            td{
+                
+                 border: 1px solid blue;
+                 text-align: center;
+            }
+            .container{
+                width: 100%;
+                position: relative;
+            } */
+            .form{
+                
+            left: 26%;
+            position: absolute;
+                
+            }
+            .btn{
+                right:22%;
+                position: absolute;
+            }
+            a{
+                text-decoration: none;
+            }
+        
+        </style>
+    </head>
+    <body>
+       <!-- <div class="container">
+        <div class="form">
+        <form method="post" action="{% url 'logout' %}">
+            {%csrf_token%}
+            <button type="submit">Logout</button>
+        </form>
+        </div>
+        
+        <div class="btn">
+            <button><a href="{% url 'add' %}">Add</a></button>
+        </div>
+        
+        <table>
+            <caption>Products</caption> 
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Name</td>
+                        <td>Image</td>
+                        <td>Price</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+               
+                       
+        {%for product in products%}
+        <tr>
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td><img src="{{product.image}}" alt='image'></td>
+        <td>{{product.price}}</td>
+        <td><button><a href="{% url 'update' id=product.id %}">Update</a></button>
+            <button><a href="{% url 'delete' id=product.id %}">Delete</a></button></td>
+        </tr>
+        {%endfor%}
+        
+        </tbody>
+  
+        </table>
+    </div>  -->
+    <form method="post" action="{% url 'logout' %}">
+        {%csrf_token%}
+        <button type="submit">Logout</button>
+    </form> 
+    <div class="btn">
+        <button><a href="{% url 'add' %}">Add Product</a></button>
+    </div>
+    <div style="text-align: center;">
+        {%for product in products%}
+        <img src="{{product.image}}" alt='image'>
+        
+        <li>Name:{{product.name}}</li>
+        <li>price:{{product.price}}</li>
+        
+        <button><a href="{% url 'update' id=product.id %}">Update</a></button>
+        <button><a href="{% url 'delete' id=product.id %}">Delete</a></button></td>
+        
+        <br/><br/>
+        {%endfor%}
+    </div>
+    </body>
+</html>
