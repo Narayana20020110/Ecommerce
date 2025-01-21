@@ -3,7 +3,7 @@
     <head>
         <title>Products</title>
         <style>
-          /*  table{
+           table{
                 background-color: bisque;
                 border: 1px solid black;
                 margin: auto;
@@ -19,15 +19,15 @@
             .container{
                 width: 100%;
                 position: relative;
-            } */
+            } 
             .form{
                 
-            left: 26%;
+            left: 25%;
             position: absolute;
                 
             }
             .btn{
-                right:22%;
+                right:25%;
                 position: absolute;
             }
             a{
@@ -37,7 +37,7 @@
         </style>
     </head>
     <body>
-       <!-- <div class="container">
+       <div class="container">
         <div class="form">
         <form method="post" action="{% url 'logout' %}">
             {%csrf_token%}
@@ -78,8 +78,8 @@
         </tbody>
   
         </table>
-    </div>  -->
-    <form method="post" action="{% url 'logout' %}">
+    </div> 
+    <!-- <form method="post" action="{% url 'logout' %}">
         {%csrf_token%}
         <button type="submit">Logout</button>
     </form> 
@@ -98,6 +98,6 @@
         
         <br/><br/>
         {%endfor%}
-    </div>
+    </div> -->
     </body>
 </html>
